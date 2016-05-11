@@ -39,11 +39,10 @@ public class QuickUnion {
                 int child = Integer.parseInt(items[0]); // left
                 int parent = Integer.parseInt(items[1]); // right
                 /* change the child value to parent */
-                allNodes[child] = parent;
+                allNodes[child] = root(parent);
 
             }
 
-        System.out.println(Arrays.toString(allNodes));
         } catch (IOException e) {
             e.printStackTrace();
         }
