@@ -1,6 +1,6 @@
 package test;
 
-import main.QuickUnion;
+import main.WeightedQuickUnion;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -12,23 +12,23 @@ import static org.junit.Assert.assertTrue;
  *          <p>
  *          Created by jacka on 5/10/2016.
  */
-public class TestQuickUnion {
+public class WeightedTestQuickUnion {
 
-    private QuickUnion quickUnion;
+    private WeightedQuickUnion weightedQuickUnion;
 
     @Before
     public void setUp() {
-        quickUnion = new QuickUnion("conn1.txt");
+        weightedQuickUnion = new WeightedQuickUnion("conn1.txt");
     }
 
     @Test
     public void testDirect() {
-        assertTrue(quickUnion.isConnected(6, 0));
+        assertTrue(weightedQuickUnion.isConnected(6, 0));
     }
 
     @Test
     public void test98() {
-        assertTrue(quickUnion.isConnected(9, 8));
+        assertTrue(weightedQuickUnion.isConnected(9, 8));
     }
 
 }
