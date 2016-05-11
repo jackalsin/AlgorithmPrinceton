@@ -38,7 +38,7 @@ public class QuickUnion {
                 String[] items = nextLine.split(" ");
                 int child = Integer.parseInt(items[0]); // left
                 int parent = Integer.parseInt(items[1]); // right
-                /* change the child value to parent */
+                /* change the child value to root of the parent */
                 allNodes[child] = root(parent);
 
             }
