@@ -38,14 +38,18 @@ public class WeightedQuickUnion {
                 int right = Integer.parseInt(items[1]); // right
                 /* change the child value to root of the parent */
 
-                if (root(left) == root(right)) continue;
-                if (size[left] < size[right]) {
-                    allNodes[left] = root(right);
-                    size[right] += size[left];
+                /* When comparing size, it should use the root size, which is the current tree size*/
+                int leftRoot = root(left);
+                int rightRoot = root(right);
+                if (leftRoot == rightRoot) continue;
+                if (size[leftRoot] < size[rightRoot]) {
+                    allNodes[leftRoot] = root(right);
+                    size[rightRoot] += size[leftRoot];
                 } else {
-                    allNodes[right] = root(left);
-                    size[left] += size[right];
+                    allNodes[rightRoot] = root(left);
+                    size[leftRoot] += size[rightRoot];
                 }
+                System.out.println(Arrays.toString(allNodes));
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -65,7 +69,8 @@ public class WeightedQuickUnion {
     }
 
     public static void main(String[] args) {
-        WeightedQuickUnion weightedQuickUnion = new WeightedQuickUnion("conn1.txt");
+        WeightedQuickUnion weightedQuickUnion = new WeightedQuickUnion("conn2.txt");
+        System.out.println(Arrays.toString(weightedQuickUnion.allNodes));
         System.out.println(weightedQuickUnion.isConnected(6, 0));
 
     }
