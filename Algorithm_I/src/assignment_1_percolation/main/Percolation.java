@@ -3,7 +3,6 @@ package assignment_1_percolation.main;
 import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 
-
 /**
  * @author jacka
  * @version 1.0 on 6/7/2016.
@@ -21,7 +20,7 @@ public class Percolation {
      */
     public Percolation(int N) {
         if (N <= 0)
-            throw new IndexOutOfBoundsException("N cannot be less than or equals 0, N =" + N);
+            throw new IllegalArgumentException("N cannot be less than or equals 0, N =" + N);
         blocks = new WeightedQuickUnionUF(N * N + 2);
         fullness = new WeightedQuickUnionUF(N * N + 2);
         rows = N;
@@ -33,12 +32,11 @@ public class Percolation {
         for (int col = 1; col <= N; col++) {
             // set zero row to connect to startIndex
             int zeroRowIndex = getIndex(1, col);
-            blocks.connected(zeroRowIndex, startIndex);
-            fullness.connected(zeroRowIndex, startIndex);
+            blocks.union(zeroRowIndex, startIndex);
+            fullness.union(zeroRowIndex, startIndex);
             // set last row to connect to tailIndex
             int lastRowIndex = getIndex(N, col);
-            blocks.connected(lastRowIndex, tailIndex);
-            fullness.connected(lastRowIndex, tailIndex);
+            blocks.union(lastRowIndex, tailIndex);
         }
     }
 
@@ -55,12 +53,19 @@ public class Percolation {
             openHelper(i, j, -1, 0);
             openHelper(i, j, +1, 0);
 
+        } else {
+            throw new IndexOutOfBoundsException();
         }
     }
 
     private void openHelper(int i, int j, int dx, int dy) {
-        if (isValidIndex(i + dx, j + dy) && openness[getIndex(i + dx, j + dy)]) {
-            blocks.union(getIndex(i, j), getIndex(i + dx, j + dy));
+        int tgtRow = i + dx;
+        int tgtCol = j + dy;
+        int tgtIndex = getIndex(tgtRow,  tgtCol);
+        int oriIndex = getIndex(i, j);
+        if (isValidIndex(tgtRow, tgtCol) && openness[tgtIndex]) {
+            blocks.union(oriIndex, tgtIndex);
+            fullness.union(oriIndex, tgtIndex);
         }
     }
     private int getIndex(int i, int j) {
@@ -92,7 +97,10 @@ public class Percolation {
      * @return true when the site is full.
      */
     public boolean isFull(int i, int j) {
-        return fullness.connected(startIndex, getIndex(i, j));
+        if (isValidIndex(i, j))
+            return fullness.connected(startIndex, getIndex(i, j)) && isOpen(i, j);
+        else
+            throw new IndexOutOfBoundsException();
     }
 
     /**
@@ -100,6 +108,7 @@ public class Percolation {
      * @return true when it percolates
      */
     public boolean percolates() {
+        if (rows == 1) return isOpen(1,1);
         return blocks.connected(startIndex, tailIndex);
     }
 
