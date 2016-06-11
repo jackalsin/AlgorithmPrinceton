@@ -1,3 +1,8 @@
+import edu.princeton.cs.algs4.Digraph;
+import edu.princeton.cs.algs4.In;
+import edu.princeton.cs.algs4.StdIn;
+import edu.princeton.cs.algs4.StdOut;
+
 import static org.junit.Assert.*;
 
 /**
@@ -5,9 +10,18 @@ import static org.junit.Assert.*;
  * @version 1.0 on 6/11/2016.
  */
 public class WordNetTest {
+
     @org.junit.Before
     public void setUp() throws Exception {
-        
+        In in = new In("data\\digraph1.txt");
+        Digraph G = new Digraph(in);
+        SAP sap = new SAP(G);
+        while (!StdIn.isEmpty()) {
+            int v = StdIn.readInt();
+            int w = StdIn.readInt();
+            int length   = sap.length(v, w);
+            int ancestor = sap.ancestor(v, w);
+        }
     }
 
     @org.junit.Test

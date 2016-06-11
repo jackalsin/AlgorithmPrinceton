@@ -21,10 +21,8 @@ public final class SAP {
         if (v <= 0 || v > digraph.V() - 1)
             throw new IndexOutOfBoundsException("v should be in range of [0, digraph.v() - 1), but v = " + v);
         if (w <= 0 || w > digraph.V() - 1)
-            throw new IndexOutOfBoundsException("w should be in range of [0, digraph.v() - 1), but w = " + v);
+            throw new IndexOutOfBoundsException("w should be in range of [0, digraph.v() - 1), but w = " + w);
 
-//        BreadthFirstDirectedPaths bfsV = new BreadthFirstDirectedPaths(digraph, v);
-//        BreadthFirstDirectedPaths bfsW = new BreadthFirstDirectedPaths(digraph, w);
         /* traverse all ancestors of v, then traverse ancestors of w, check if visited.*/
         Queue<Integer> path = new ArrayDeque<>();
         path.add(v);
@@ -80,19 +78,94 @@ public final class SAP {
         if (minDist == Integer.MAX_VALUE) return -1;
         return minDist;
     }
+
     // a common ancestor of v and w that participates in a shortest ancestral path; -1 if no such path
     public int ancestor(int v, int w) {
-        return 0;
+        return ancestorHelper(v, w)[0];
     }
 
+    private int[] ancestorHelper(int v, int w) {
+        if (v <= 0 || v > digraph.V() - 1)
+            throw new IndexOutOfBoundsException("v should be in range of [0, digraph.v() - 1), but v = " + v);
+        if (w <= 0 || w > digraph.V() - 1)
+            throw new IndexOutOfBoundsException("w should be in range of [0, digraph.v() - 1), but w = " + w);
+
+        /* traverse all ancestors of v, then traverse ancestors of w, check if visited.*/
+        Queue<Integer> path = new ArrayDeque<>();
+        path.add(v);
+        Map<Integer, Integer> ancestorToDist = new HashMap<>();
+        ancestorToDist.put(v, 0);
+        bfsTraverseV(digraph, path, ancestorToDist);
+        return bfsTraverseWwithAncestor(digraph,w,ancestorToDist);
+    }
+
+    /**
+     * Traverse G from source point w, return ancestor that can result the min distance to the v's ancestor
+     * @param G digraph G
+     * @param w source
+     * @param ancestorToDist ancestor of v and its ancestor.
+     * @return an array
+     *          Index 0 : ancestor that can result the min distance to the v's ancestor
+     *          Index 1 : distance
+     */
+    private int[] bfsTraverseWwithAncestor(Digraph G, int w, final Map<Integer, Integer> ancestorToDist) {
+        Queue<Integer> path = new ArrayDeque<>();
+        path.add(w);
+        Set<Integer> visited = ancestorToDist.keySet();
+        int curDist = 0;
+        int minDist = Integer.MAX_VALUE;
+        int minAncestor = -1;
+        while(!path.isEmpty()) {
+            Integer number = path.remove();
+            Iterable<Integer> itr = G.adj(number);
+            curDist++;
+            for (Integer ancestor : itr) {
+                if (visited.contains(ancestor)) {
+                    int distFromV = ancestorToDist.get(ancestor);
+                    if (distFromV + curDist < minDist) {
+                        minDist = distFromV + curDist;
+                        minAncestor = ancestor;
+                    }
+                } else {
+                    path.add(ancestor);
+                }
+            }
+        }
+        if (minDist == Integer.MAX_VALUE) minDist = -1;
+        return new int[] {minAncestor, minDist};
+    }
     // length of shortest ancestral path between any vertex in v and any vertex in w; -1 if no such path
     public int length(Iterable<Integer> v, Iterable<Integer> w) {
-        return 0;
+        int minDist = Integer.MAX_VALUE;
+        for (Integer vChild: v) {
+            for (Integer wChild: w) {
+                int curDist = length(vChild, wChild);
+                if (curDist > 0 && curDist < minDist)
+                    minDist = curDist;
+            }
+        }
+        if (minDist == Integer.MAX_VALUE) return -1;
+        return minDist;
     }
 
     // a common ancestor that participates in shortest ancestral path; -1 if no such path
     public int ancestor(Iterable<Integer> v, Iterable<Integer> w) {
-        return 0;
+        int minDist = Integer.MAX_VALUE;
+        int minAncestor = -1;
+
+        for (Integer vChild: v) {
+            for (Integer wChild: w) {
+                int[] result = ancestorHelper(vChild, wChild);
+                int curAncestor = result[0];
+                int curDist = result[1];
+                if (curDist > 0 && curDist < minDist) {
+                    minDist = curDist;
+                    minAncestor = curAncestor;
+                }
+            }
+        }
+
+        return minAncestor;
     }
 
     // do unit testing of this class
