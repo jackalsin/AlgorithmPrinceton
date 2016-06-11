@@ -28,5 +28,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="Node.js Core Modules v" level="application" />
   </component>
 </module>
