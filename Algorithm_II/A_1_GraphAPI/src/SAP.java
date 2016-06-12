@@ -103,7 +103,7 @@ public class SAP {
         Map<Integer, Integer> ancestorToDist = new HashMap<>();
         ancestorToDist.put(v, 0);
         bfsTraverseV(digraph, path, ancestorToDist);
-        return bfsTraverseWwithAncestor(digraph,w,ancestorToDist);
+        return bfsTraverseWwithAncestor(digraph, w, ancestorToDist);
     }
 
     /**
@@ -129,7 +129,7 @@ public class SAP {
         int curDist = 0;
         Map<Integer, Integer> wToDist = new HashMap<>();
         wToDist.put(w, 0);
-        while(!path.isEmpty()) {
+        while (!path.isEmpty()) {
             Integer number = path.remove();
             Iterable<Integer> itr = G.adj(number);
             curDist = wToDist.get(number) + 1;
@@ -143,6 +143,7 @@ public class SAP {
                 } else {
                     path.add(ancestor);
                 }
+                wToDist.put(ancestor, curDist);
             }
         }
         if (minDist == Integer.MAX_VALUE) minDist = -1;
