@@ -14,7 +14,8 @@ public class SAP {
     public SAP(Digraph G) {
         if (G == null) throw new NullPointerException();
         digraph = new Digraph(G);
-//        System.out.println(G.toString());
+        if (digraph.V() == 10)
+            System.out.println(digraph.toString());
     }
 
     // length of shortest ancestral path between v and w; -1 if no such path
@@ -31,19 +32,19 @@ public class SAP {
         Map<Integer, Integer> ancestorToDist = new HashMap<>();
         ancestorToDist.put(v, 0);
         bfsTraverseV(digraph, path, ancestorToDist);
-        return bfsTraverseW(digraph,w,ancestorToDist);
+        return bfsTraverseW(digraph,w, ancestorToDist);
     }
 
     private void bfsTraverseV(Digraph G, Queue<Integer> path, Map<Integer, Integer> ancestorToDist) {
         int dist = 1;
-        while(!path.isEmpty()) {
+        while (!path.isEmpty()) {
             Integer number = path.remove();
             int currentDist = ancestorToDist.get(number);
             Iterable<Integer> itr = G.adj(number);
             for (Integer ancestor : itr) {
                 if (!ancestorToDist.keySet().contains(ancestor)) {
                     path.add(ancestor);
-                    ancestorToDist.put(ancestor,currentDist + 1);
+                    ancestorToDist.put(ancestor, currentDist + 1);
                 } // visited, do nothing
             }
         }
@@ -75,11 +76,11 @@ public class SAP {
                     int distFromV = ancestorToDist.get(ancestor);
                     if (distFromV + distFromW < minDist)
                         minDist = distFromV + distFromW;
-//                } else {
                 }
-                if (!wToDist.keySet().contains(ancestor))
+                if (!wToDist.keySet().contains(ancestor)) {
                     path.add(ancestor);
-                wToDist.put(ancestor, distFromW);
+                    wToDist.put(ancestor, distFromW);
+                }
             }
         }
         if (minDist == Integer.MAX_VALUE) return -1;
@@ -88,7 +89,6 @@ public class SAP {
 
     // a common ancestor of v and w that participates in a shortest ancestral path; -1 if no such path
     public int ancestor(int v, int w) {
-//        System.out.println("call ancestor v =" + v + " w = " + w);
         return ancestorHelper(v, w)[0];
     }
 
@@ -142,9 +142,10 @@ public class SAP {
                         minAncestor = ancestor;
                     }
                 }
-                if (!wToDist.keySet().contains(ancestor))
+                if (!wToDist.keySet().contains(ancestor)) {
                     path.add(ancestor);
-                wToDist.put(ancestor, curDist);
+                    wToDist.put(ancestor, curDist);
+                }
             }
         }
         if (minDist == Integer.MAX_VALUE) minDist = -1;
@@ -152,6 +153,8 @@ public class SAP {
     }
     // length of shortest ancestral path between any vertex in v and any vertex in w; -1 if no such path
     public int length(Iterable<Integer> v, Iterable<Integer> w) {
+        if (v == null) throw new NullPointerException("v should not be null ");
+        if (w == null) throw new NullPointerException("w should not be null ");
         int minDist = Integer.MAX_VALUE;
         for (Integer vChild: v) {
             for (Integer wChild: w) {
@@ -174,7 +177,7 @@ public class SAP {
                 int[] result = ancestorHelper(vChild, wChild);
                 int curAncestor = result[0];
                 int curDist = result[1];
-                if (curDist > 0 && curDist < minDist) {
+                if (curDist >= 0 && curDist < minDist) {
                     minDist = curDist;
                     minAncestor = curAncestor;
                 }
@@ -189,3 +192,15 @@ public class SAP {
 
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+

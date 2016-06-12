@@ -50,14 +50,13 @@ public class WordNet {
         // put (36, AND_circuit) into map
         while (file.hasNextLine()) {
             String line = file.readLine();
-            System.out.println(line);
             String[] items = line.split(",");
             Set<Integer> subset = new HashSet<>();
             Integer head = Integer.valueOf(items[0]);
             for (int i = 1; i < items.length; i++) {
                 Integer item = Integer.valueOf(items[i]);
                 subset.add(item);
-                resultGraph.addEdge(head,item);
+                resultGraph.addEdge(head, item);
             }
             ancestors.put(head, subset);
         }
@@ -70,7 +69,6 @@ public class WordNet {
         // put (36, AND_circuit) into map
         while (file.hasNextLine()) {
             String line = file.readLine();
-            System.out.println(line);
             String[] items = line.split(",");
             idToSynset.put(Integer.valueOf(items[0]), items[1]);
         }
