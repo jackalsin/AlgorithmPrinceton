@@ -34,5 +34,8 @@ public class SAPTest9 {
         assertEquals(sap.ancestor(7, 3), 3);
     }
 
-
+    @Test
+    public void ancesterTest_0_1() {
+            assertEquals(sap.ancestor(0, 1), 0);
+    }
 }

@@ -75,9 +75,10 @@ public class SAP {
                     int distFromV = ancestorToDist.get(ancestor);
                     if (distFromV + distFromW < minDist)
                         minDist = distFromV + distFromW;
-                } else {
-                    path.add(ancestor);
+//                } else {
                 }
+                if (!wToDist.keySet().contains(ancestor))
+                    path.add(ancestor);
                 wToDist.put(ancestor, distFromW);
             }
         }
@@ -140,9 +141,9 @@ public class SAP {
                         minDist = distFromV + curDist;
                         minAncestor = ancestor;
                     }
-                } else {
-                    path.add(ancestor);
                 }
+                if (!wToDist.keySet().contains(ancestor))
+                    path.add(ancestor);
                 wToDist.put(ancestor, curDist);
             }
         }

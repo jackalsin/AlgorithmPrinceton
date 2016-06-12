@@ -30,4 +30,8 @@ public class SAPTest5 {
         assertEquals(sap.length(8, 20), 4);
     }
 
+    @Test
+    public void ancesterTest_8_20() {
+        assertEquals(sap.ancestor(8, 20), 9);
+    }
 }
