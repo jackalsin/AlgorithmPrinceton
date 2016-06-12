@@ -1,4 +1,7 @@
-import edu.princeton.cs.algs4.*;
+
+import edu.princeton.cs.algs4.Digraph;
+import edu.princeton.cs.algs4.DirectedCycle;
+import edu.princeton.cs.algs4.In;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -54,9 +57,9 @@ public class WordNet {
         while (file.hasNextLine()) {
             String line = file.readLine();
             String[] items = line.split(",");
-            Integer head = Integer.valueOf(items[0]);
+            int head = Integer.valueOf(items[0]);
             for (int i = 1; i < items.length; i++) {
-                Integer item = Integer.valueOf(items[i]);
+                int item = Integer.valueOf(items[i]);
                 resultGraph.addEdge(head, item);
             }
         }
@@ -66,7 +69,7 @@ public class WordNet {
 
     private void initSynsets(String synsets) {
         In file = new In(synsets);
-        /* format: 36,AND_circuit AND_gate,a circuit in a computer that fires only when all of its inputs fire */
+        /* format: 36,AND_circuit AND_gate,a circuit in ... */
         // put (36, AND_circuit) into map
         while (file.hasNextLine()) {
             String line = file.readLine();
@@ -90,7 +93,8 @@ public class WordNet {
 
     // is the word a WordNet noun?
     public boolean isNoun(String word) {
-        if (word == null) throw new NullPointerException(word + " should not be null");
+        if (word == null)
+            throw new NullPointerException(word + " should not be null");
         return ancestors.keySet().contains(word);
     }
 
@@ -104,8 +108,13 @@ public class WordNet {
         return sap.length(idsOfNounA, idsOfNounB);
     }
 
-    // a synset (second field of synsets.txt) that is the common ancestor of nounA and nounB
-    // in a shortest ancestral path (defined below)
+    /**
+     * A synset (second field of synsets.txt) that is the common ancestor of
+     * nounA and nounB in a shortest ancestral path (defined below).
+     * @param nounA a word
+     * @param nounB a word
+     * @return null when not found, or return ancestor.
+     */
     public String sap(String nounA, String nounB) {
         if ((!isNoun(nounA)) || (!isNoun(nounB))) {
             throw new IllegalArgumentException("Both words must be nouns!");
