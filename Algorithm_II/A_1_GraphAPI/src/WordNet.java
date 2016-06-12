@@ -9,7 +9,7 @@ import java.util.Set;
  * @author jacka
  * @version 1.0 on 6/11/2016.
  */
-public final class WordNet {
+public class WordNet {
     private final SAP sap;
 
     private final Map<Integer,String> idToSynset;
@@ -50,6 +50,7 @@ public final class WordNet {
         // put (36, AND_circuit) into map
         while (file.hasNextLine()) {
             String line = file.readLine();
+            System.out.println(line);
             String[] items = line.split(",");
             Set<Integer> subset = new HashSet<>();
             Integer head = Integer.valueOf(items[0]);
@@ -69,6 +70,7 @@ public final class WordNet {
         // put (36, AND_circuit) into map
         while (file.hasNextLine()) {
             String line = file.readLine();
+            System.out.println(line);
             String[] items = line.split(",");
             idToSynset.put(Integer.valueOf(items[0]), items[1]);
         }

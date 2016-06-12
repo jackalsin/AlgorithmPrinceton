@@ -7,23 +7,25 @@ import java.util.Queue;
  * @author jacka
  * @version 1.0 on 6/11/2016.
  */
-public final class SAP {
+public class SAP {
 
     private final Digraph digraph;
 
     public SAP(Digraph G) {
         if (G == null) throw new NullPointerException();
         digraph = new Digraph(G);
+//        System.out.println(G.toString());
     }
 
     // length of shortest ancestral path between v and w; -1 if no such path
     public int length(int v, int w) {
-        if (v <= 0 || v > digraph.V() - 1)
+        if (v < 0 || v > digraph.V() - 1)
             throw new IndexOutOfBoundsException("v should be in range of [0, digraph.v() - 1), but v = " + v);
-        if (w <= 0 || w > digraph.V() - 1)
+        if (w < 0 || w > digraph.V() - 1)
             throw new IndexOutOfBoundsException("w should be in range of [0, digraph.v() - 1), but w = " + w);
-
+//        System.out.println("call ancestor v =" + v + " w = " + w);
         /* traverse all ancestors of v, then traverse ancestors of w, check if visited.*/
+        if (v == w) return 0;
         Queue<Integer> path = new ArrayDeque<>();
         path.add(v);
         Map<Integer, Integer> ancestorToDist = new HashMap<>();
@@ -36,14 +38,14 @@ public final class SAP {
         int dist = 1;
         while(!path.isEmpty()) {
             Integer number = path.remove();
+            int currentDist = ancestorToDist.get(number);
             Iterable<Integer> itr = G.adj(number);
             for (Integer ancestor : itr) {
                 if (!ancestorToDist.keySet().contains(ancestor)) {
                     path.add(ancestor);
-                    ancestorToDist.put(ancestor,dist);
+                    ancestorToDist.put(ancestor,currentDist + 1);
                 } // visited, do nothing
             }
-            dist ++;
         }
 
     }
@@ -59,20 +61,24 @@ public final class SAP {
         Queue<Integer> path = new ArrayDeque<>();
         path.add(w);
         Set<Integer> visited = ancestorToDist.keySet();
-        int curDist = 0;
+        Map<Integer, Integer> wToDist = new HashMap<>();
+        wToDist.put(w, 0);
+        int distFromW = 0;
         int minDist = Integer.MAX_VALUE;
+        if (visited.contains(w))  minDist = ancestorToDist.get(w); // check root
         while(!path.isEmpty()) {
             Integer number = path.remove();
             Iterable<Integer> itr = G.adj(number);
-            curDist++;
+            distFromW = wToDist.get(number) + 1;
             for (Integer ancestor : itr) {
                 if (visited.contains(ancestor)) {
                     int distFromV = ancestorToDist.get(ancestor);
-                    if (distFromV + curDist < minDist)
-                        minDist = distFromV + curDist;
+                    if (distFromV + distFromW < minDist)
+                        minDist = distFromV + distFromW;
                 } else {
                     path.add(ancestor);
                 }
+                wToDist.put(ancestor, distFromW);
             }
         }
         if (minDist == Integer.MAX_VALUE) return -1;
@@ -81,13 +87,14 @@ public final class SAP {
 
     // a common ancestor of v and w that participates in a shortest ancestral path; -1 if no such path
     public int ancestor(int v, int w) {
+//        System.out.println("call ancestor v =" + v + " w = " + w);
         return ancestorHelper(v, w)[0];
     }
 
     private int[] ancestorHelper(int v, int w) {
-        if (v <= 0 || v > digraph.V() - 1)
+        if (v < 0 || v > digraph.V() - 1)
             throw new IndexOutOfBoundsException("v should be in range of [0, digraph.v() - 1), but v = " + v);
-        if (w <= 0 || w > digraph.V() - 1)
+        if (w < 0 || w > digraph.V() - 1)
             throw new IndexOutOfBoundsException("w should be in range of [0, digraph.v() - 1), but w = " + w);
 
         /* traverse all ancestors of v, then traverse ancestors of w, check if visited.*/
@@ -112,6 +119,8 @@ public final class SAP {
         Queue<Integer> path = new ArrayDeque<>();
         path.add(w);
         Set<Integer> visited = ancestorToDist.keySet();
+        // isAncestor
+        if (visited.contains(w)) return new int[] {w, ancestorToDist.get(w)};
         int curDist = 0;
         int minDist = Integer.MAX_VALUE;
         int minAncestor = -1;
@@ -140,7 +149,7 @@ public final class SAP {
         for (Integer vChild: v) {
             for (Integer wChild: w) {
                 int curDist = length(vChild, wChild);
-                if (curDist > 0 && curDist < minDist)
+                if (curDist >= 0 && curDist < minDist)
                     minDist = curDist;
             }
         }

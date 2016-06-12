@@ -1,6 +1,7 @@
 import edu.princeton.cs.algs4.Digraph;
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdIn;
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.HashSet;
@@ -21,6 +22,12 @@ public class SAPTest {
         sap = new SAP(G);
     }
 
+
+    @Test
+    public void lengthTest_3_3() {
+        assertEquals(sap.length(3, 3), 0);
+    }
+
     @Test
     public void lengthTest_3_11() {
         assertEquals(sap.length(3, 11), 4);
@@ -36,6 +43,11 @@ public class SAPTest {
     @Test
     public void lengthTest_1_6() {
         assertEquals(sap.length(1,6), -1);
+    }
+
+    @Test
+    public void ancestorTest_3_3() {
+        assertEquals(sap.ancestor(3, 3), 3);
     }
 
     @Test
@@ -56,6 +68,15 @@ public class SAPTest {
     }
 
     // ------ test of iterable ------
+
+    @Test
+    public void lengthTestItr_3_3() {
+        Set<Integer> three = new HashSet<>();
+        Set<Integer> ele = new HashSet<>();
+        three.add(3);
+        ele.add(3);
+        assertEquals(sap.length(three, ele), 0);
+    }
     @Test
     public void lengthTestItr_3_11() {
         Set<Integer> three = new HashSet<>();
