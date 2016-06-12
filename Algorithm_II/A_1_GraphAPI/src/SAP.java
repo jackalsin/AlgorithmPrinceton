@@ -120,14 +120,19 @@ public class SAP {
         path.add(w);
         Set<Integer> visited = ancestorToDist.keySet();
         // isAncestor
-        if (visited.contains(w)) return new int[] {w, ancestorToDist.get(w)};
-        int curDist = 0;
         int minDist = Integer.MAX_VALUE;
         int minAncestor = -1;
+        if (visited.contains(w)) {
+            minDist = ancestorToDist.get(w);
+            minAncestor = w;
+        }
+        int curDist = 0;
+        Map<Integer, Integer> wToDist = new HashMap<>();
+        wToDist.put(w, 0);
         while(!path.isEmpty()) {
             Integer number = path.remove();
             Iterable<Integer> itr = G.adj(number);
-            curDist++;
+            curDist = wToDist.get(number) + 1;
             for (Integer ancestor : itr) {
                 if (visited.contains(ancestor)) {
                     int distFromV = ancestorToDist.get(ancestor);

@@ -36,4 +36,9 @@ public class SAPTest2 {
     public void lengthTest_1_5() {
         assertEquals(sap.length(1, 5), 2);
     }
+
+    @Test
+    public void ancesterTest_1_5() {
+        assertEquals(sap.ancestor(1, 5), 0);
+    }
 }

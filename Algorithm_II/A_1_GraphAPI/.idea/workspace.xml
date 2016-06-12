@@ -26,8 +26,8 @@
       <file leaf-file-name="SAP.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SAP.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-424">
-              <caret line="66" column="40" selection-start-line="66" selection-start-column="40" selection-end-line="66" selection-end-column="40" />
+            <state relative-caret-position="151">
+              <caret line="126" column="28" selection-start-line="126" selection-start-column="28" selection-end-line="126" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -70,14 +70,16 @@
       <file leaf-file-name="SAPTest2.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SAPTest2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <state relative-caret-position="305">
+              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding>
                 <element signature="e#542#543#0" expanded="true" />
                 <element signature="e#591#592#0" expanded="true" />
+                <element signature="e#637#638#0" expanded="true" />
                 <element signature="e#686#687#0" expanded="true" />
                 <element signature="e#732#733#0" expanded="true" />
                 <element signature="e#781#782#0" expanded="true" />
+                <element signature="e#880#881#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -306,7 +308,7 @@
       <recent name="C:\Users\jacka\OneDrive\Code_Temp\AlgorithmPrinceton\Algorithm_II\A_1_GraphAPI\data" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SAPTest and 3 more">
+  <component name="RunManager" selected="JUnit.SAPTest2">
     <configuration default="false" name="SAPTest and 3 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="A_1_GraphAPI" />
@@ -354,48 +356,6 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="SAPTest.lengthTest_3_3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="A_1_GraphAPI" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SAPTest" />
-      <option name="METHOD_NAME" value="lengthTest_3_3" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="SAPTest.lengthTestItr_3_3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="A_1_GraphAPI" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SAPTest" />
-      <option name="METHOD_NAME" value="lengthTestItr_3_3" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
     <configuration default="false" name="SAPTest2.lengthTest_1_4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="A_1_GraphAPI" />
@@ -405,6 +365,48 @@
       <option name="MAIN_CLASS_NAME" value="SAPTest2" />
       <option name="METHOD_NAME" value="lengthTest_1_4" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="SAPTest2.ancesterTest_1_5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="A_1_GraphAPI" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SAPTest2" />
+      <option name="METHOD_NAME" value="ancesterTest_1_5" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="SAPTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="A_1_GraphAPI" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SAPTest2" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -875,17 +877,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.SAPTest and 3 more" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.SAPTest2.lengthTest_1_5" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.SAPTest.lengthTest_3_3" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.SAPTest.lengthTestItr_3_3" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.SAPTest2.lengthTest_1_4" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.SAPTest2.lengthTest_1_4" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.SAPTest2.ancesterTest_1_5" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.SAPTest2" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.SAPTest and 3 more" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.SAPTest2.lengthTest_1_4" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.SAPTest.lengthTestItr_3_3" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.SAPTest.lengthTest_3_3" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.SAPTest2.lengthTest_1_5" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.SAPTest2" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.SAPTest2.ancesterTest_1_5" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.SAPTest2.lengthTest_1_5" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.SAPTest and 3 more" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.SAPTest2.lengthTest_1_4" />
       </list>
     </recent_temporary>
   </component>
@@ -913,22 +915,31 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1465588757561</updated>
-      <workItem from="1465588758833" duration="27974000" />
+      <workItem from="1465588758833" duration="28904000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
+    <history-entry file="SAPTest2 - 2016.06.11 at 21h 35m 22s.xml">
+      <configuration name="SAPTest2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SAPTest2 - 2016.06.11 at 21h 39m 17s.xml">
+      <configuration name="SAPTest2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SAPTest2_ancesterTest_1_5 - 2016.06.11 at 21h 32m 52s.xml">
+      <configuration name="SAPTest2.ancesterTest_1_5" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SAPTest2_ancesterTest_1_5 - 2016.06.11 at 21h 33m 48s.xml">
+      <configuration name="SAPTest2.ancesterTest_1_5" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SAPTest2_ancesterTest_1_5 - 2016.06.11 at 21h 36m 45s.xml">
+      <configuration name="SAPTest2.ancesterTest_1_5" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="SAPTest2_lengthTest_1_4 - 2016.06.11 at 21h 22m 54s.xml">
       <configuration name="SAPTest2.lengthTest_1_4" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SAPTest2_lengthTest_1_5 - 2016.06.11 at 21h 07m 40s.xml">
+    <history-entry file="SAPTest2_lengthTest_1_5 - 2016.06.11 at 21h 31m 36s.xml">
       <configuration name="SAPTest2.lengthTest_1_5" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SAPTest_and_3_more - 2016.06.11 at 21h 03m 38s.xml">
-      <configuration name="SAPTest and 3 more" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SAPTest_and_3_more - 2016.06.11 at 21h 16m 40s.xml">
-      <configuration name="SAPTest and 3 more" configurationId="JUnit" />
     </history-entry>
     <history-entry file="SAPTest_and_3_more - 2016.06.11 at 21h 19m 15s.xml">
       <configuration name="SAPTest and 3 more" configurationId="JUnit" />
@@ -936,25 +947,16 @@
     <history-entry file="SAPTest_and_3_more - 2016.06.11 at 21h 23m 34s.xml">
       <configuration name="SAPTest and 3 more" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SAPTest_lengthTestItr_3_3 - 2016.06.11 at 21h 18m 23s.xml">
-      <configuration name="SAPTest.lengthTestItr_3_3" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="SAPTest_lengthTestItr_3_3 - 2016.06.11 at 21h 19m 07s.xml">
       <configuration name="SAPTest.lengthTestItr_3_3" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SAPTest_lengthTest_3_3 - 2016.06.11 at 21h 07m 39s.xml">
-      <configuration name="SAPTest.lengthTest_3_3" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SAPTest_lengthTest_3_3 - 2016.06.11 at 21h 12m 39s.xml">
-      <configuration name="SAPTest.lengthTest_3_3" configurationId="JUnit" />
-    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27974000" />
+    <option name="totallyTimeSpent" value="28904000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1012,12 +1014,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/SAPTest2.java</url>
-          <line>31</line>
+          <line>41</line>
           <properties />
-          <option name="timeStamp" value="11" />
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="12" />
+      <option name="time" value="13" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1239,22 +1241,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SAPTest2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        <state relative-caret-position="305">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding>
             <element signature="e#542#543#0" expanded="true" />
             <element signature="e#591#592#0" expanded="true" />
+            <element signature="e#637#638#0" expanded="true" />
             <element signature="e#686#687#0" expanded="true" />
             <element signature="e#732#733#0" expanded="true" />
             <element signature="e#781#782#0" expanded="true" />
+            <element signature="e#880#881#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SAP.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-424">
-          <caret line="66" column="40" selection-start-line="66" selection-start-column="40" selection-end-line="66" selection-end-column="40" />
+        <state relative-caret-position="151">
+          <caret line="126" column="28" selection-start-line="126" selection-start-column="28" selection-end-line="126" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
