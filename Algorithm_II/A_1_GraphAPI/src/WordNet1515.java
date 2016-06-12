@@ -2,18 +2,18 @@ import edu.princeton.cs.algs4.Digraph;
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdIn;
 
-import static org.junit.Assert.assertEquals;
-
 /**
  * @author jacka
  * @version 1.0 on 6/11/2016.
  */
-public class WordNetTest {
+public class WordNet1515 {
 
     private WordNet wordNet;
+
+
     @org.junit.Before
     public void setUp() throws Exception {
-        wordNet = new WordNet("data\\synsets.txt", "data\\hypernyms.txt");
+        wordNet = new WordNet("data\\synsets15.txt", "data\\hypernyms15Path.txt");
     }
 
     @org.junit.Test
@@ -28,10 +28,8 @@ public class WordNetTest {
 
     @org.junit.Test
     public void distance() throws Exception {
-        assertEquals(12, wordNet.distance("leaker", "Miocene"));
+        wordNet.distance("a", "b");
     }
-
-
 
     @org.junit.Test
     public void sap() throws Exception {

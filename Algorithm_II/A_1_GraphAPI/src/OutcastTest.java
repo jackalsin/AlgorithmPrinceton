@@ -3,6 +3,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.IOException;
+
 import static org.junit.Assert.*;
 
 /**
@@ -18,7 +20,7 @@ public class OutcastTest {
 
     private Outcast outcast;
     @Before
-    public void setUp() {
+    public void setUp() throws IOException {
         WordNet wordNet = new WordNet(synset, hypernyms);
         outcast = new Outcast(wordNet);
 

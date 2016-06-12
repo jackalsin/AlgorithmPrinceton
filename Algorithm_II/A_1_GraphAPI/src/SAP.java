@@ -14,8 +14,6 @@ public class SAP {
     public SAP(Digraph G) {
         if (G == null) throw new NullPointerException();
         digraph = new Digraph(G);
-        if (digraph.V() == 10)
-            System.out.println(digraph.toString());
     }
 
     // length of shortest ancestral path between v and w; -1 if no such path
@@ -169,9 +167,11 @@ public class SAP {
 
     // a common ancestor that participates in shortest ancestral path; -1 if no such path
     public int ancestor(Iterable<Integer> v, Iterable<Integer> w) {
+        if (v == null) throw new NullPointerException("v should not be null ");
+        if (w == null) throw new NullPointerException("w should not be null ");
+
         int minDist = Integer.MAX_VALUE;
         int minAncestor = -1;
-
         for (Integer vChild: v) {
             for (Integer wChild: w) {
                 int[] result = ancestorHelper(vChild, wChild);
