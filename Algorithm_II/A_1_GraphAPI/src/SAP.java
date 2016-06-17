@@ -22,7 +22,6 @@ public class SAP {
             throw new IndexOutOfBoundsException("v should be in range of [0, digraph.v() - 1), but v = " + v);
         if (w < 0 || w > digraph.V() - 1)
             throw new IndexOutOfBoundsException("w should be in range of [0, digraph.v() - 1), but w = " + w);
-//        System.out.println("call ancestor v =" + v + " w = " + w);
         /* traverse all ancestors of v, then traverse ancestors of w, check if visited.*/
         if (v == w) return 0;
         Queue<Integer> path = new ArrayDeque<>();
@@ -30,7 +29,7 @@ public class SAP {
         Map<Integer, Integer> ancestorToDist = new HashMap<>();
         ancestorToDist.put(v, 0);
         bfsTraverseV(digraph, path, ancestorToDist);
-        return bfsTraverseW(digraph,w, ancestorToDist);
+        return bfsTraverseW(digraph, w, ancestorToDist);
     }
 
     private void bfsTraverseV(Digraph G, Queue<Integer> path, Map<Integer, Integer> ancestorToDist) {
