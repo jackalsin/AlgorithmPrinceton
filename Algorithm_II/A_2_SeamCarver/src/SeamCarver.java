@@ -19,6 +19,10 @@ public class SeamCarver {
         if (picture == null)
             throw new NullPointerException("picture should not be null");
         this.picture = picture;
+        initEnergy(picture);
+    }
+
+    private void initEnergy(Picture picture) {
         energy = new double[picture.width()][picture.height()];
         for (int col = 0; col < picture.width(); col++) {
             for (int row = 0; row < picture.height(); row++) {
@@ -26,6 +30,7 @@ public class SeamCarver {
             }
         }
     }
+
     // current picture
     public Picture picture() {
         return picture;
@@ -65,7 +70,9 @@ public class SeamCarver {
     }
     // sequence of indices for horizontal seam
     public int[] findHorizontalSeam() {
-        int[] result = new int[picture.width()];
+        transpose();
+        int[] result = findVerticalSeam();
+        transpose();
         return result;
     }
     // sequence of indices for vertical seam
@@ -129,11 +136,28 @@ public class SeamCarver {
     }
     // remove horizontal seam from current picture
     public void removeHorizontalSeam(int[] seam) {
-
+        transpose();
+        removeVerticalSeam(seam);
+        transpose();
     }
     // remove vertical seam from current picture
     public void removeVerticalSeam(int[] seam) {
-
+        if (seam == null) throw new NullPointerException();
+        if (seam.length != picture.height() || seam.length <= 1)
+            throw new IllegalArgumentException();
+        Picture newPicture = new Picture(picture.width() - 1, picture.height());
+        for (int row = 0; row < picture.height(); row++) {
+            for (int col = 0; col < picture.width(); col++) {
+                int newCol = col;
+                if (col == seam[row]) continue;
+                else if (col > seam[row]) {
+                    newCol--;
+                }
+                newPicture.set(newCol, row, picture.get(col, row));
+            }
+        }
+        this.picture = newPicture;
+        initEnergy(newPicture);
     }
 
     private void display(double[][] ddArray) {
@@ -155,5 +179,17 @@ public class SeamCarver {
             }
             System.out.println();
         }
+    }
+
+    private void transpose() {
+        Picture transposedPicture = new Picture(picture.height(), picture.width());
+        double[][] newEnergy = new double[picture.height()][picture.width()];
+        for (int i = 0; i < picture.width(); i++)
+            for (int k = 0; k < picture.height(); k++) {
+                transposedPicture.set(k, i, picture.get(i, k));
+                newEnergy[k][i] = energy[i][k];
+            }
+        energy = newEnergy;
+        picture = transposedPicture;
     }
 }
