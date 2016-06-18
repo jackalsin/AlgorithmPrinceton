@@ -18,7 +18,7 @@ public class SeamCarver {
     public SeamCarver(Picture picture) {
         if (picture == null)
             throw new NullPointerException("picture should not be null");
-        this.picture = picture;
+        this.picture = new Picture(picture);
         initEnergy(picture);
     }
 
@@ -33,7 +33,7 @@ public class SeamCarver {
 
     // current picture
     public Picture picture() {
-        return picture;
+        return new Picture(picture);
     }
     // width of current picture
     public int width() {
@@ -143,8 +143,23 @@ public class SeamCarver {
     // remove vertical seam from current picture
     public void removeVerticalSeam(int[] seam) {
         if (seam == null) throw new NullPointerException();
-        if (seam.length != picture.height() || seam.length <= 1)
+        if (seam.length != picture.height() || picture.width() <= 1)
             throw new IllegalArgumentException();
+        for (int seamChild : seam) {
+            if (seamChild < 0 || seamChild >= picture.width())
+                throw new IllegalArgumentException();
+        }
+
+        for (int i = 0; i < seam.length; i++) {
+            int seamChild = seam[i];
+            if (seamChild < 0 || seamChild >= picture.width())
+                throw new IllegalArgumentException();
+            if ((i != 0) && (Math.abs((double)seamChild - (double)seam[i - 1]) > 1d)) {
+                throw new IllegalArgumentException();
+            }
+        }
+
+
         Picture newPicture = new Picture(picture.width() - 1, picture.height());
         for (int row = 0; row < picture.height(); row++) {
             for (int col = 0; col < picture.width(); col++) {
