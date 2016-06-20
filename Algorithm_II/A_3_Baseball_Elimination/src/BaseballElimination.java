@@ -6,7 +6,6 @@ import edu.princeton.cs.algs4.StdOut;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.nio.channels.IllegalChannelGroupException;
 import java.util.*;
 
 /**
@@ -93,7 +92,7 @@ public class BaseballElimination {
     // is given team eliminated?
     public boolean isEliminated(String team) {
         if (!nameToIndex.containsKey(team))
-            throw new IllegalChannelGroupException();
+            throw new IllegalArgumentException();
         int x = nameToIndex.get(team);
         int teamNum = numberOfTeams();
 
@@ -120,7 +119,7 @@ public class BaseballElimination {
     // subset R of teams that eliminates given team; null if not eliminated
     public Iterable<String> certificateOfElimination(String team) {
         if (!nameToIndex.containsKey(team))
-            throw new IllegalChannelGroupException();
+            throw new IllegalArgumentException();
 
         int x = nameToIndex.get(team);
         int teamNum = numberOfTeams();

@@ -2,14 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9627b6f-3f5c-48a3-836e-9d31b998ba93" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_bluecatcode_junit_junit_4_12_extended_1_0_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/BaseballEliminationTestTeam10.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/BaseballEliminationTestTeam4.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/BaseballEliminationTestTeam7.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/A_3_Baseball_Elimination/BaseballElimination.class" afterPath="$PROJECT_DIR$/out/production/A_3_Baseball_Elimination/BaseballElimination.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/A_3_Baseball_Elimination.iml" afterPath="$PROJECT_DIR$/A_3_Baseball_Elimination.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BaseballElimination.java" afterPath="$PROJECT_DIR$/src/BaseballElimination.java" />
     </list>
     <ignored path="A_3_Baseball_Elimination.iws" />
@@ -36,8 +28,20 @@
       <file leaf-file-name="BaseballElimination.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/BaseballElimination.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="38" column="55" selection-start-line="38" selection-start-column="55" selection-end-line="38" selection-end-column="55" />
+            <state relative-caret-position="486">
+              <caret line="94" column="47" selection-start-line="94" selection-start-column="47" selection-end-line="94" selection-end-column="47" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="teams48.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/teams48.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -118,8 +122,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/BaseballEliminationTestTeam4.java" />
         <option value="$PROJECT_DIR$/src/BaseballEliminationTestTeam10.java" />
-        <option value="$PROJECT_DIR$/src/BaseballElimination.java" />
         <option value="$PROJECT_DIR$/src/BaseballEliminationTestTeam7.java" />
+        <option value="$PROJECT_DIR$/src/BaseballElimination.java" />
       </list>
     </option>
   </component>
@@ -840,7 +844,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1466376520157</updated>
-      <workItem from="1466376524303" duration="15406000" />
+      <workItem from="1466376524303" duration="15559000" />
     </task>
     <servers />
   </component>
@@ -877,7 +881,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15406000" />
+    <option name="totallyTimeSpent" value="15559000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1015,11 +1019,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/teams48.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/BaseballElimination.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="38" column="55" selection-start-line="38" selection-start-column="55" selection-end-line="38" selection-end-column="55" />
-          <folding />
+        <state relative-caret-position="486">
+          <caret line="94" column="47" selection-start-line="94" selection-start-column="47" selection-end-line="94" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
