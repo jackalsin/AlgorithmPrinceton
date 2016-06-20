@@ -36,14 +36,14 @@ public class BaseballElimination {
             int row = 0;
             while ((line = bufferedReader.readLine()) != null) {
                 /* Atlanta       83 71  8  0 1 6 1 */
-                String[] items = line.split("\\s+");
+                String[] items = line.trim().split("\\s+");
                 names[row] = items[0];
                 nameToIndex.put(items[0], row);
                 w[row] = Integer.parseInt(items[1]);
                 l[row] = Integer.parseInt(items[2]);
                 r[row] = Integer.parseInt(items[3]);
                 for (int col = 0; col < teamNum; col++) {
-                    g[row][col] = Integer.parseInt(items[col + 3]);
+                    g[row][col] = Integer.parseInt(items[col + 4]);
                 }
                 row++;
             }
@@ -112,9 +112,9 @@ public class BaseballElimination {
         FordFulkerson fordFulkerson = new FordFulkerson(flowNetwork, sourceId, terminateId);
 
         for (FlowEdge flowEdge : flowNetwork.adj(sourceId)) {
-            if (flowEdge.flow() != flowEdge.capacity()) return false;
+            if (flowEdge.flow() != flowEdge.capacity()) return true;
         }
-        return true;
+        return false;
     }
 
     // subset R of teams that eliminates given team; null if not eliminated
@@ -150,6 +150,7 @@ public class BaseballElimination {
                 }
             }
         }
+        if (resultSet.isEmpty()) return null;
         return resultSet;
     }
 
