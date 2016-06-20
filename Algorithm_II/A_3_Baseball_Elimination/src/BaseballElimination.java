@@ -111,7 +111,8 @@ public class BaseballElimination {
         FordFulkerson fordFulkerson = new FordFulkerson(flowNetwork, sourceId, terminateId);
 
         for (FlowEdge flowEdge : flowNetwork.adj(sourceId)) {
-            if (flowEdge.flow() != flowEdge.capacity()) return true;
+            if (flowEdge.flow() != flowEdge.capacity())
+                return true; /* 1176 --> 1083 */
         }
         return false;
     }
@@ -144,7 +145,7 @@ public class BaseballElimination {
         for (FlowEdge flowEdge : flowNetwork.adj(sourceId)) {
             if (flowEdge.flow() != flowEdge.capacity()) {
                 for (String name : names) {
-                    if (fordFulkerson.inCut(nameToIndex.get(name)))
+                    if (fordFulkerson.inCut(nameToIndex.get(name) + matchNum))
                         resultSet.add(name);
                 }
             }
