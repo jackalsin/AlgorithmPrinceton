@@ -14,13 +14,14 @@ public class TestBoggleSolver {
     private static final String DICT = "test/dictionary-algs4.txt";
     private static final String BOARD = "test/board4x4.txt";
 
+    private BoggleSolver solver;
     private int score;
 
     @Before
     public void setUp() {
         In in = new In(DICT);
         String[] dictionary = in.readAllStrings();
-        BoggleSolver solver = new BoggleSolver(dictionary);
+        solver = new BoggleSolver(dictionary);
         BoggleBoard board = new BoggleBoard(BOARD);
         Iterable<String> allWords = solver.getAllValidWords(board);
         for (String word : allWords) {
@@ -34,7 +35,6 @@ public class TestBoggleSolver {
     public void testScoreOf() {
         assertEquals(33, score);
     }
-
 
 
 }

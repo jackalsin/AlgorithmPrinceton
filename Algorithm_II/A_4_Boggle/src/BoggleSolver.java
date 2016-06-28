@@ -18,15 +18,14 @@ public class BoggleSolver {
         {1, 1}, {1, 0},     {1, -1}
     };
 
-    private final TST<Integer> dictionary;
+    private final Hybrid<Integer> dictionary;
     // Initializes the data structure using the given array of strings as the dictionary.
     // (You can assume each word in the dictionary contains only the uppercase letters A through Z.)
     public BoggleSolver(String[] dictionary) {
         if (dictionary == null) throw new NullPointerException("dictionary cannot be null");
         List<String> dictString = (Arrays.asList(dictionary));
         dictString = new ArrayList<>(dictString);
-        Collections.shuffle(dictString);
-        this.dictionary = new TST<>();
+        this.dictionary = new Hybrid<>();
         for (String key : dictString) {
             this.dictionary.put(key, calculateScore(key));
         }
