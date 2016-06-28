@@ -24,6 +24,7 @@ public class BoggleSolver {
     public BoggleSolver(String[] dictionary) {
         if (dictionary == null) throw new NullPointerException("dictionary cannot be null");
         List<String> dictString = (Arrays.asList(dictionary));
+        dictString = new ArrayList<>(dictString);
         Collections.shuffle(dictString);
         this.dictionary = new TST<>();
         for (String key : dictString) {
