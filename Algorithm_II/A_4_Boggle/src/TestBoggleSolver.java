@@ -11,8 +11,6 @@ import static org.junit.Assert.assertEquals;
  */
 public class TestBoggleSolver {
 
-    private BoggleSolver boggleSolver;
-
     private static final String DICT = "test/dictionary-algs4.txt";
     private static final String BOARD = "test/board4x4.txt";
 
@@ -24,7 +22,8 @@ public class TestBoggleSolver {
         String[] dictionary = in.readAllStrings();
         BoggleSolver solver = new BoggleSolver(dictionary);
         BoggleBoard board = new BoggleBoard(BOARD);
-        for (String word : solver.getAllValidWords(board)) {
+        Iterable<String> allWords = solver.getAllValidWords(board);
+        for (String word : allWords) {
             StdOut.println(word);
             score += solver.scoreOf(word);
         }
@@ -35,6 +34,7 @@ public class TestBoggleSolver {
     public void testScoreOf() {
         assertEquals(33, score);
     }
+
 
 
 }

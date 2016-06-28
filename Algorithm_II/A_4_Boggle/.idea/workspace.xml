@@ -26,8 +26,8 @@
       <file leaf-file-name="BoggleSolver.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/BoggleSolver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="149" column="37" selection-start-line="149" selection-start-column="37" selection-end-line="149" selection-end-column="37" />
+            <state relative-caret-position="432">
+              <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -38,18 +38,8 @@
       <file leaf-file-name="dictionary-algs4.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/dictionary-algs4.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="board4x4.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/board4x4.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="215">
+              <caret line="4803" column="5" selection-start-line="4803" selection-start-column="0" selection-end-line="4803" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -58,12 +48,12 @@
       <file leaf-file-name="TestBoggleSolver.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TestBoggleSolver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="24" column="59" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
+            <state relative-caret-position="27">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#919#920#0" expanded="true" />
-                <element signature="e#958#959#0" expanded="true" />
+                <element signature="e#925#926#0" expanded="true" />
+                <element signature="e#964#965#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -72,8 +62,8 @@
       <file leaf-file-name="TST.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TST.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="861">
-              <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+            <state relative-caret-position="201">
+              <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -101,13 +91,31 @@
       <file leaf-file-name="BoggleBoard.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BoggleBoard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-67">
-              <caret line="84" column="11" selection-start-line="84" selection-start-column="11" selection-end-line="84" selection-end-column="11" />
+            <state relative-caret-position="203">
+              <caret line="94" column="40" selection-start-line="94" selection-start-column="40" selection-end-line="94" selection-end-column="40" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
                 <element signature="e#6378#6379#0" expanded="true" />
                 <element signature="e#6412#6413#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestTST.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TestTST.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="346">
+              <caret line="59" column="55" selection-start-line="59" selection-start-column="55" selection-end-line="59" selection-end-column="55" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1248#1249#0" expanded="true" />
+                <element signature="e#1296#1297#0" expanded="true" />
+                <element signature="e#1345#1346#0" expanded="true" />
+                <element signature="e#1394#1395#0" expanded="true" />
+                <element signature="e#1438#1439#0" expanded="true" />
+                <element signature="e#1500#1501#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -132,6 +140,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/BoggleBoard.java" />
         <option value="$PROJECT_DIR$/src/BoggleGame.java" />
+        <option value="$PROJECT_DIR$/src/MainTest.java" />
+        <option value="$PROJECT_DIR$/src/TestTST.java" />
         <option value="$PROJECT_DIR$/src/TST.java" />
         <option value="$PROJECT_DIR$/src/TestBoggleSolver.java" />
         <option value="$PROJECT_DIR$/src/BoggleSolver.java" />
@@ -236,6 +246,8 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Entropy/ResumeParser_CN" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RunManager" selected="JUnit.TestBoggleSolver">
     <configuration default="false" name="TestBoggleSolver" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -247,6 +259,84 @@
       <option name="MAIN_CLASS_NAME" value="TestBoggleSolver" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="MainTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="MainTest" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="A_4_Boggle" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="TestTST.testHasPrefixAbacus" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="A_4_Boggle" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestTST" />
+      <option name="METHOD_NAME" value="testHasPrefixAbacus" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="TestTST.testContainsSense" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="A_4_Boggle" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestTST" />
+      <option name="METHOD_NAME" value="testContainsSense" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="TestTST.testGetSense" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="A_4_Boggle" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestTST" />
+      <option name="METHOD_NAME" value="testGetSense" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -729,13 +819,21 @@
       <envs />
       <method />
     </configuration>
-    <list size="2">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Application.MainRun" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.TestBoggleSolver" />
+      <item index="2" class="java.lang.String" itemvalue="Application.MainTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.TestTST.testHasPrefixAbacus" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.TestTST.testContainsSense" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.TestTST.testGetSense" />
     </list>
     <recent_temporary>
-      <list size="1">
+      <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.TestBoggleSolver" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.TestTST.testGetSense" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.TestTST.testContainsSense" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.TestTST.testHasPrefixAbacus" />
+        <item index="4" class="java.lang.String" itemvalue="Application.MainTest" />
       </list>
     </recent_temporary>
   </component>
@@ -763,41 +861,44 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1466999537022</updated>
-      <workItem from="1466999542500" duration="19474000" />
+      <workItem from="1466999542500" duration="30345000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestBoggleSolver - 2016.06.28 at 00h 12m 43s.xml">
+    <history-entry file="TestBoggleSolver - 2016.06.28 at 13h 22m 39s.xml">
       <configuration name="TestBoggleSolver" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestBoggleSolver - 2016.06.28 at 00h 13m 52s.xml">
+    <history-entry file="TestBoggleSolver - 2016.06.28 at 13h 27m 21s.xml">
       <configuration name="TestBoggleSolver" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestBoggleSolver - 2016.06.28 at 00h 15m 28s.xml">
+    <history-entry file="TestBoggleSolver - 2016.06.28 at 13h 28m 36s.xml">
       <configuration name="TestBoggleSolver" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestBoggleSolver - 2016.06.28 at 00h 16m 19s.xml">
+    <history-entry file="TestBoggleSolver - 2016.06.28 at 13h 29m 44s.xml">
       <configuration name="TestBoggleSolver" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestBoggleSolver - 2016.06.28 at 00h 19m 06s.xml">
+    <history-entry file="TestBoggleSolver - 2016.06.28 at 13h 30m 05s.xml">
       <configuration name="TestBoggleSolver" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestBoggleSolver - 2016.06.28 at 00h 24m 24s.xml">
+    <history-entry file="TestBoggleSolver - 2016.06.28 at 13h 30m 42s.xml">
       <configuration name="TestBoggleSolver" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestBoggleSolver - 2016.06.28 at 00h 26m 13s.xml">
+    <history-entry file="TestBoggleSolver - 2016.06.28 at 13h 33m 28s.xml">
       <configuration name="TestBoggleSolver" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestBoggleSolver - 2016.06.28 at 00h 27m 01s.xml">
+    <history-entry file="TestBoggleSolver - 2016.06.28 at 13h 43m 28s.xml">
       <configuration name="TestBoggleSolver" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestBoggleSolver - 2016.06.28 at 00h 30m 10s.xml">
-      <configuration name="TestBoggleSolver" configurationId="JUnit" />
+    <history-entry file="TestTST_testGetSense - 2016.06.28 at 13h 22m 30s.xml">
+      <configuration name="TestTST.testGetSense" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestTST_testGetSense - 2016.06.28 at 13h 27m 13s.xml">
+      <configuration name="TestTST.testGetSense" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19474000" />
+    <option name="totallyTimeSpent" value="30345000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -805,29 +906,29 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33260393" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31419286" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38379532" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20415778" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21018419" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3954496" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.312026" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -846,13 +947,13 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/BoggleSolver.java</url>
-          <line>60</line>
+          <url>file://$PROJECT_DIR$/src/TestTST.java</url>
+          <line>59</line>
           <properties />
-          <option name="timeStamp" value="4" />
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="5" />
+      <option name="time" value="12" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -861,6 +962,45 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/test/board4x4.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../Algorithm_I/libs/algs4.jar!/edu/princeton/cs/algs4/TrieST.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-387">
+          <caret line="112" column="57" selection-start-line="112" selection-start-column="57" selection-end-line="112" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BoggleBoard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="94" column="40" selection-start-line="94" selection-start-column="40" selection-end-line="94" selection-end-column="40" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#6378#6379#0" expanded="true" />
+            <element signature="e#6412#6413#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/BoggleGame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="379">
@@ -878,67 +1018,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TST.java">
+    <entry file="file://$PROJECT_DIR$/src/TestTST.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="861">
-          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../Algorithm_I/libs/algs4.jar!/edu/princeton/cs/algs4/TrieST.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="209" column="5" selection-start-line="209" selection-start-column="5" selection-end-line="209" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TestBoggleSolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="24" column="59" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
+        <state relative-caret-position="346">
+          <caret line="59" column="55" selection-start-line="59" selection-start-column="55" selection-end-line="59" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#919#920#0" expanded="true" />
-            <element signature="e#958#959#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BoggleBoard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-67">
-          <caret line="84" column="11" selection-start-line="84" selection-start-column="11" selection-end-line="84" selection-end-column="11" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#6378#6379#0" expanded="true" />
-            <element signature="e#6412#6413#0" expanded="true" />
+            <element signature="e#1248#1249#0" expanded="true" />
+            <element signature="e#1296#1297#0" expanded="true" />
+            <element signature="e#1345#1346#0" expanded="true" />
+            <element signature="e#1394#1395#0" expanded="true" />
+            <element signature="e#1438#1439#0" expanded="true" />
+            <element signature="e#1500#1501#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/dictionary-algs4.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="215">
+          <caret line="4803" column="5" selection-start-line="4803" selection-start-column="0" selection-end-line="4803" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/board4x4.txt">
+    <entry file="file://$PROJECT_DIR$/src/TST.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="201">
+          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TestBoggleSolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#925#926#0" expanded="true" />
+            <element signature="e#964#965#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BoggleSolver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="149" column="37" selection-start-line="149" selection-start-column="37" selection-end-line="149" selection-end-column="37" />
+        <state relative-caret-position="432">
+          <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
