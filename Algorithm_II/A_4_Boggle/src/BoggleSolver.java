@@ -5,6 +5,8 @@ import java.util.*;
 
 /**
  * This is the main implementation of the boggle solver.
+ * The Data Structure used is the hybrid of R-Way and TST
+ * You will NOT get ALL Score for this data structure, but it's fun to implement it.
  * @author jacka
  * @version 1.0 on 6/27/2016.
  */
