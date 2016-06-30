@@ -1,4 +1,6 @@
 /**
+ * This is implementing BurrowsWheeler Algorithm
+ * 
  * @author jacka
  * @version 1.0 on 6/29/2016.
  */
