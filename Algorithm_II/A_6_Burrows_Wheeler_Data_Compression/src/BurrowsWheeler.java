@@ -1,8 +1,5 @@
 import edu.princeton.cs.algs4.BinaryStdIn;
 import edu.princeton.cs.algs4.BinaryStdOut;
-import edu.princeton.cs.algs4.StdOut;
-
-import java.util.Arrays;
 
 /**
  * This is implementing BurrowsWheeler Algorithm
@@ -11,6 +8,8 @@ import java.util.Arrays;
  * @version 1.0 on 6/29/2016.
  */
 public class BurrowsWheeler {
+
+    private static final int R = 256;
     // apply Burrows-Wheeler encoding, reading from standard input and writing to standard output
     public static void encode() {
         /* java BurrowsWheeler - < abra.txt */
@@ -54,55 +53,27 @@ public class BurrowsWheeler {
         char[] t = input.toCharArray();
         int[] next = new int[t.length];
 
-        char[] sorted = input.toCharArray();
-        Arrays.sort(sorted);
-
-        int index = first;
+        int[] counts = new int[R + 1];
         for (int i = 0; i < strLen; i++) {
-            char firstCol = sorted[index];
-            int preNum = prevCount(sorted, index); // get how many the same char
-            next[index] = iThChar(t, preNum, firstCol);
-            index = next[index];
+            counts[input.charAt(i) + 1]++;
         }
-//        System.err.println("next = " + Arrays.toString(next));
-//        System.err.println("first = " + first); // 3
-        // WTF BinaryStdOut!
+        // create delimiter intervals [start, anotherStart)
+        for (int i = 1; i < R + 1; i++) {
+            counts[i] += counts[i - 1];
+        }
+        for (int i = 0; i < strLen; i++) {
+            next[counts[input.charAt(i)]++] = i;
+        }
 
+        // WTF BinaryStdOut!
+        // output
         for (int i = 0, row = next[first]; i < next.length; i++, row = next[row]) {
-//            System.err.println("row = " + row + " t[row] = " + t[row]);
             BinaryStdOut.write(t[row]);
         }
 
+
         BinaryStdIn.close();
         BinaryStdOut.close();
-    }
-
-    private static int iThChar(final char[] t, int preNum, char tgtChar) {
-        int count = 0;
-        int needNum = preNum + 1;
-        for (int i = 0; i < t.length; i++) {
-            if (tgtChar == t[i]) {
-                count++;
-                if (count == needNum)
-                    return i;
-            }
-        }
-        throw new IllegalArgumentException();
-    }
-
-    /**
-     * To return the number of the same char (sorted[int]) has appeared in a sorted array.
-     * @param sorted a sorted char array
-     * @param index index of the tgt char
-     * @return the repeated times
-     */
-    private static int prevCount(final char[] sorted, int index) {
-        char tgt = sorted[index];
-        int prevCount = 0;
-        int pt = index - 1;
-        while (pt >= 0 && sorted[pt--] == tgt)
-            prevCount++;
-        return prevCount;
     }
 
     // if args[0] is '-', apply Burrows-Wheeler encoding
