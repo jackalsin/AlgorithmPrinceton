@@ -57,8 +57,19 @@ public class BurrowsWheelerTest {
     }
 
     @Test
-    public void decode() throws Exception {
+    public void decodeTest() throws Exception {
+        System.setIn(new ByteArrayInputStream(ENCODED_INPUT));
+        ByteArrayOutputStream resultStream = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(resultStream));
 
+        BurrowsWheeler.decode();
+        String decoded = resultStream.toString();
+        // check length and chars
+        assertEquals(DECODED_INPUT.length(), decoded.length());
+        assertEquals(DECODED_INPUT, decoded);
+
+        System.setIn(null);
+        System.setOut(null);
     }
     
 }
