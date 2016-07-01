@@ -16,8 +16,6 @@ public class CircularSuffixArray {
     public CircularSuffixArray(String s) {
         if (s == null)
             throw new NullPointerException("s cannot be null");
-        if (s.isEmpty())
-            throw new IllegalArgumentException("s cannot be empty");
         this.rawString = s;
         index = new Integer[rawString.length()];
         for (int i = 0; i < rawString.length(); i++)
